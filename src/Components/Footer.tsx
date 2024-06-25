@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0E0B16] h-[230px] border-t-[0.5px] border-t-[#E7DFDD]  text-[#E7DFDD] flex justify-center items-center flex-col mx-auto">
+    <div className="bg-[#0E0B16] h-[230px] border-t-[0.5px] border-t-[#E7DFDD]  text-[#E7DFDD] flex justify-center items-center flex-col mx-auto">
       <div className="container mx-auto flex justify-between items-center ml-5">
         <div className="grid grid-cols-5 items-center self-center w-[50%] mx-auto my-8">
           <Link href="/">
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-b-[0.5px] border-b-[#48403e] w-full flex justify-center items-center mx-auto py-3">
-        <section className="text-center mb-5 flex gap-5 -ml-5">
+        <div className="text-center mb-5 flex gap-5 -ml-5">
           <a
             href="https://www.facebook.com/alihfala/"
             className="text-[#E7DFDD] bg-[#4717F6] w-fit p-2 rounded-full hover:bg-[#A239CA]"
@@ -63,12 +63,12 @@ const Footer = () => {
           >
             <FiGithub />
           </a>
-        </section>
+        </div>
       </div>
       <div className="text-center p-3 -ml-5 text-[#E7DFDD]">
         © 2024 Copyright: <a href="/">alihfala</a>
       </div>
-    </footer>
+    </div>
   );
 };
 

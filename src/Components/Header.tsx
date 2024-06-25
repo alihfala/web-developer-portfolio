@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="bg-[#0E0B16] px-4 pt-4 pb-2 border-b-[0.5px] border-b-[#E7DFDD]">
-      <nav className="container mx-auto !flex justify-between items-center">
+    <div className="bg-[#0E0B16] px-4 pt-4 pb-2 border-b-[0.5px] border-b-[#E7DFDD]">
+      <div className="container mx-auto !flex justify-between items-center">
         <Link href="/">
           <div className="w-12 h-12 -mt-2 ml-2 flex justify-start border-[2px] rounded-sm border-[#A239CA] p-0.5 cursor-pointer">
             <Image src="/af.png" className="w-full h-full" alt="" />
@@ -33,8 +33,8 @@ const Header = () => {
             </h1>
           </Link>
         </div>
-      </nav>
-    </header>
+      </div>
+    </div>
   );
 };
 
