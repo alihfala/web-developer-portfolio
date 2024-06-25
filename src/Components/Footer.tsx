@@ -44,6 +44,9 @@ const Footer = () => {
                 width: "fit-content",
                 padding: "0.75rem",
                 textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                margin: "auto",
               }}
             >
               Home
@@ -58,6 +61,9 @@ const Footer = () => {
                 width: "fit-content",
                 padding: "0.75rem",
                 textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                margin: "auto",
               }}
             >
               About
@@ -91,6 +97,9 @@ const Footer = () => {
                 width: "fit-content",
                 padding: "0.75rem",
                 textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                margin: "auto",
               }}
             >
               Projects
@@ -105,6 +114,9 @@ const Footer = () => {
                 width: "fit-content",
                 padding: "0.75rem",
                 textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                margin: "auto",
               }}
             >
               Contact

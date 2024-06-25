@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <Layout>
-      <div className="flex  items-center justify-between min-h-screen bg-[#0E0B16] text-[#E7DFDD] px-24">
+      <div className="lg:flex md:flex flex-col items-center justify-between min-h-screen bg-[#0E0B16] text-[#E7DFDD] px-24 ">
         <div className="flex flex-col items-center justify-start w-[50%]">
           <h1 className="text-4xl font-bold mb-4 flex justify-start w-full">
             Welcome to My Portfolio!
