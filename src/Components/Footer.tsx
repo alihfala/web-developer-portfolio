@@ -10,15 +10,15 @@ const Footer = () => {
     <div
       style={{
         backgroundColor: "#0E0B16",
-        height: "230px",
+        height: "240px",
         borderTop: "0.5px solid #E7DFDD",
         color: "#E7DFDD",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        maxWidth: "64rem",
         margin: "0 auto",
+        width: "100%",
       }}
     >
       <div
@@ -129,7 +129,7 @@ const Footer = () => {
             marginBottom: "0.5rem",
             display: "flex",
             gap: "0.75rem",
-            marginLeft: "-4.25rem",
+            marginLeft: "-0.25rem",
             width: "fit-content",
           }}
         >
@@ -210,7 +210,7 @@ const Footer = () => {
       <div
         style={{
           textAlign: "center",
-          padding: "10px",
+          padding: "12px",
           marginLeft: "-0.5rem",
           color: "#E7DFDD",
         }}

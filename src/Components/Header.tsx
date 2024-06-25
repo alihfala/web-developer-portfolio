@@ -8,20 +8,19 @@ const Header = () => {
       style={{
         backgroundColor: "#0E0B16",
         paddingLeft: "1rem",
-        paddingTop: "1rem",
+        paddingTop: "0.5rem",
         paddingBottom: "0.5rem",
         borderBottom: "0.5px solid #E7DFDD",
       }}
     >
       <div
         style={{
-          maxWidth: "64rem",
+          width: "100%",
           margin: "0 auto",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           height: "fit-content",
-          padding: "20px",
         }}
       >
         <Link href="/">
