@@ -9,28 +9,50 @@ const Footer = () => {
   return (
     <div className="bg-[#0E0B16] h-[230px] border-t-[0.5px] border-t-[#E7DFDD]  text-[#E7DFDD] flex justify-center items-center flex-col mx-auto">
       <div className="container mx-auto flex justify-between items-center ml-5">
-        <div className="grid grid-cols-5 items-center self-center w-[50%] mx-auto my-8">
-          <Link href="/">
+        <div
+          className="mx-auto my-8"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+            alignItems: "center",
+            justifySelf: "center",
+            width: "50%",
+          }}
+        >
+          <Link href="/" style={{ gridColumn: "span 1" }}>
             <h1 className="text-[#E7DFDD] text-base  pb-2 w-fit px-3 text-center col-span-1">
               Home
             </h1>
           </Link>
-          <Link href="/about">
+          <Link href="/about" style={{ gridColumn: "span 1" }}>
             <h1 className="text-[#E7DFDD] text-base pb-2 w-fit px-3 text-center col-span-1">
               About
             </h1>
           </Link>
-          <Link href="/">
-            <div className="w-12 h-12 -mt-2 ml-2 flex justify-start border-[2px] rounded-sm border-[#A239CA] p-0.5 cursor-pointer mx-4">
+          <Link href="/" style={{ gridColumn: "span 1" }}>
+            <div
+              style={{
+                width: "3rem", // Equivalent to w-12
+                height: "3rem", // Equivalent to h-12
+                marginTop: "-0.5rem", // Equivalent to -mt-2
+                marginLeft: "0.5rem", // Equivalent to ml-2
+                display: "flex", // Equivalent to flex
+                justifyContent: "start", // Equivalent to justify-start
+                border: "2px solid #A239CA", // Equivalent to border-[2px] rounded-sm border-[#A239CA]
+                padding: "0.125rem", // Equivalent to p-0.5
+                cursor: "pointer", // Equivalent to cursor-pointer
+              }}
+            >
+              {" "}
               <Image src="/af.png" className="w-full h-full" alt="" />
             </div>
           </Link>
-          <Link href="/projects">
+          <Link href="/projects" style={{ gridColumn: "span 1" }}>
             <h1 className="text-[#E7DFDD] text-base pb-2 w-fit px-3 text-center col-span-1">
               Projects
             </h1>
           </Link>
-          <Link href="/contact">
+          <Link href="/contact" style={{ gridColumn: "span 1" }}>
             <h1 className="text-[#E7DFDD] text-base pb-2 w-fit px-3 text-center col-span-1">
               Contact
             </h1>
