@@ -56,7 +56,7 @@ const projects = [
 const Projects = () => {
   return (
     <Layout>
-      <div className="container mx-auto p-4 bg-[#0E0B16]">
+      <div className="container mx-auto p-4 bg-[#0E0B16] min-w-full">
         <h2 className="text-3xl font-bold mb-4 text-[#E7DFDD]">Work Project</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.slice(0, 2).map((project) => (
@@ -64,7 +64,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-      <div className="container mx-auto p-4 bg-[#0E0B16] pb-10">
+      <div className="container mx-auto p-4 bg-[#0E0B16] pb-10 min-w-full">
         <h2 className="text-3xl font-bold mb-4 text-[#E7DFDD]">My Project</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.slice(2).map((project) => (

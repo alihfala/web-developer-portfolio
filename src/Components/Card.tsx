@@ -5,11 +5,12 @@ import Link from "next/link";
 const Card = ({ project }: any) => {
   const styles = {
     width: "100%",
-    height: "60px",
+    height: "240px",
     borderRadius: "0.5rem",
     marginBottom: "1rem",
     objectFit: project.mobile ? "contain" : ("fill" as "contain" | "fill"),
   };
+
   return (
     <div className="bg-[#E7DFDD] p-4 shadow-md rounded-lg">
       <img
@@ -24,7 +25,7 @@ const Card = ({ project }: any) => {
       <p className="mb-4">{project.description}</p>
       <Link href={`/projects/${project.id}`}>
         <button
-          className="text-[#E7DFDD] bg-[#4717F6] w-fit px-3 py-2 rounded-md hover:bg-[#A239CA]"
+          className="text-[#E7DFDD] bg-[#4717F6] w-fit px-3 py-2 rounded-md !hover:bg-[#A239CA]"
           style={{
             color: "#E7DFDD",
             backgroundColor: "#4717F6",

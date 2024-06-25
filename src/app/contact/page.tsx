@@ -5,7 +5,7 @@ import Layout from "@/Components/layout/Layout";
 const Contact = () => {
   return (
     <Layout>
-      <div className="container mx-auto p-4 min-h-screen bg-[#0E0B16] flex justify-center items-center flex-col gap-4">
+      <div className="container mx-auto p-4 min-h-screen bg-[#0E0B16] flex justify-center items-center flex-col gap-4 min-w-full">
         <h2 className="text-4xl font-bold mb-4 text-[#E7DFDD]">Get in Touch</h2>
         <p className="text-xl text-[#E7DFDD] w-[80%] text-center">
           Looking for a Full Stack Developer ready to infuse creativity and

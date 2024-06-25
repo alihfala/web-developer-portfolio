@@ -89,7 +89,7 @@ const Project = ({ params }: any) => {
   }
   return (
     <Layout>
-      <div className="container mx-auto p-4 bg-[#0E0B16]">
+      <div className="container mx-auto p-4 bg-[#0E0B16] min-w-full">
         <h1 className="text-4xl font-bold mb-4 text-[#E7DFDD]">
           {project.title}
         </h1>
