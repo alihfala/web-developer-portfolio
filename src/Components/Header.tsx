@@ -4,23 +4,39 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="bg-[#0E0B16] px-4 pt-4 pb-2 border-b-[0.5px] border-b-[#E7DFDD]">
+    <div
+      style={{
+        backgroundColor: "#0E0B16",
+        paddingLeft: "1rem",
+        paddingTop: "1rem",
+        paddingBottom: "0.5rem",
+        borderBottom: "0.5px solid #E7DFDD",
+      }}
+    >
       <div
-        className="container mx-auto !flex justify-between items-center"
-        style={{ display: "flex", justifyContent: "space-between" }}
+        style={{
+          maxWidth: "64rem",
+          margin: "0 auto",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          height: "fit-content",
+          padding: "20px",
+        }}
       >
         <Link href="/">
           <div
             style={{
-              width: "3rem", // Equivalent to w-12
-              height: "3rem", // Equivalent to h-12
-              marginTop: "-0.5rem", // Equivalent to -mt-2
-              marginLeft: "0.5rem", // Equivalent to ml-2
-              display: "flex", // Equivalent to flex
-              justifyContent: "start", // Equivalent to justify-start
-              border: "2px solid #A239CA", // Equivalent to border-[2px] rounded-sm border-[#A239CA]
-              padding: "0.125rem", // Equivalent to p-0.5
-              cursor: "pointer", // Equivalent to cursor-pointer
+              width: "3rem",
+              height: "3rem",
+              marginTop: "-0.5rem",
+              marginLeft: "0.5rem",
+              display: "flex",
+              justifyContent: "start",
+              border: "2px solid #A239CA",
+              borderRadius: "0.25rem",
+              padding: "0.125rem",
+              cursor: "pointer",
             }}
           >
             <Image src="/af.png" className="w-full h-full" alt="" />
@@ -35,24 +51,63 @@ const Header = () => {
             width: "50%",
           }}
         >
-          {" "}
           <Link href="/" style={{ gridColumn: "span 1" }}>
-            <h1 className="text-[#E7DFDD] text-lg animated-border pb-2 w-fit px-3 text-center">
+            <h1
+              style={{
+                color: "#E7DFDD",
+                fontSize: "1.125rem",
+                borderBottom: "2px solid transparent",
+                paddingBottom: "0.5rem",
+                width: "fit-content",
+                padding: "0.75rem",
+                textAlign: "center",
+              }}
+            >
               Home
             </h1>
           </Link>
           <Link href="/about" style={{ gridColumn: "span 1" }}>
-            <h1 className="text-[#E7DFDD] text-lg animated-border pb-2 w-fit px-3 text-center">
+            <h1
+              style={{
+                color: "#E7DFDD",
+                fontSize: "1.125rem",
+                borderBottom: "2px solid transparent",
+                paddingBottom: "0.5rem",
+                width: "fit-content",
+                padding: "0.75rem",
+                textAlign: "center",
+              }}
+            >
               About
             </h1>
           </Link>
           <Link href="/projects" style={{ gridColumn: "span 1" }}>
-            <h1 className="text-[#E7DFDD] text-lg animated-border pb-2 w-fit px-3 text-center">
+            <h1
+              style={{
+                color: "#E7DFDD",
+                fontSize: "1.125rem",
+                borderBottom: "2px solid transparent",
+                paddingBottom: "0.5rem",
+                width: "fit-content",
+                padding: "0.75rem",
+                textAlign: "center",
+              }}
+            >
               Projects
             </h1>
           </Link>
           <Link href="/contact" style={{ gridColumn: "span 1" }}>
-            <h1 className="text-[#E7DFDD] text-lg animated-border pb-2 w-fit px-3 text-center">
+            <h1
+              style={{
+                color: "#E7DFDD",
+                fontSize: "1.125rem",
+                borderBottom: "2px solid transparent",
+                paddingBottom: "0.5rem",
+                width: "fit-content",
+                padding: "0.75rem",
+                textAlign: "center",
+              }}
+            >
               Contact
             </h1>
           </Link>

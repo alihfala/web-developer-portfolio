@@ -1,4 +1,4 @@
-// components/Header.js
+// components/Footer.js
 import Link from "next/link";
 import { RiFacebookFill } from "react-icons/ri";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
@@ -7,88 +7,218 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="bg-[#0E0B16] h-[230px] border-t-[0.5px] border-t-[#E7DFDD]  text-[#E7DFDD] flex justify-center items-center flex-col mx-auto">
-      <div className="container mx-auto flex justify-between items-center ml-5">
+    <div
+      style={{
+        backgroundColor: "#0E0B16",
+        height: "230px",
+        borderTop: "0.5px solid #E7DFDD",
+        color: "#E7DFDD",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        maxWidth: "64rem",
+        margin: "0 auto",
+      }}
+    >
+      <div
+        className="container flex justify-between items-center !mx-auto"
+        style={{ padding: "40px" }}
+      >
         <div
-          className="mx-auto my-8"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+            gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
             alignItems: "center",
             justifySelf: "center",
             width: "50%",
+            margin: "auto",
           }}
         >
           <Link href="/" style={{ gridColumn: "span 1" }}>
-            <h1 className="text-[#E7DFDD] text-base  pb-2 w-fit px-3 text-center col-span-1">
+            <h1
+              style={{
+                color: "#E7DFDD",
+                fontSize: "1rem",
+                paddingBottom: "0.5rem",
+                width: "fit-content",
+                padding: "0.75rem",
+                textAlign: "center",
+              }}
+            >
               Home
             </h1>
           </Link>
           <Link href="/about" style={{ gridColumn: "span 1" }}>
-            <h1 className="text-[#E7DFDD] text-base pb-2 w-fit px-3 text-center col-span-1">
+            <h1
+              style={{
+                color: "#E7DFDD",
+                fontSize: "1rem",
+                paddingBottom: "0.5rem",
+                width: "fit-content",
+                padding: "0.75rem",
+                textAlign: "center",
+              }}
+            >
               About
             </h1>
           </Link>
           <Link href="/" style={{ gridColumn: "span 1" }}>
             <div
               style={{
-                width: "3rem", // Equivalent to w-12
-                height: "3rem", // Equivalent to h-12
-                marginTop: "-0.5rem", // Equivalent to -mt-2
-                marginLeft: "0.5rem", // Equivalent to ml-2
-                display: "flex", // Equivalent to flex
-                justifyContent: "start", // Equivalent to justify-start
-                border: "2px solid #A239CA", // Equivalent to border-[2px] rounded-sm border-[#A239CA]
-                padding: "0.125rem", // Equivalent to p-0.5
-                cursor: "pointer", // Equivalent to cursor-pointer
+                width: "3rem",
+                height: "3rem",
+                marginTop: "-0.5rem",
+                marginLeft: "0.5rem",
+                display: "flex",
+                border: "2px solid #A239CA",
+                borderRadius: "0.25rem",
+                padding: "0.125rem",
+                cursor: "pointer",
+                justifyContent: "center",
+                margin: "auto",
               }}
             >
-              {" "}
               <Image src="/af.png" className="w-full h-full" alt="" />
             </div>
           </Link>
           <Link href="/projects" style={{ gridColumn: "span 1" }}>
-            <h1 className="text-[#E7DFDD] text-base pb-2 w-fit px-3 text-center col-span-1">
+            <h1
+              style={{
+                color: "#E7DFDD",
+                fontSize: "1rem",
+                paddingBottom: "0.5rem",
+                width: "fit-content",
+                padding: "0.75rem",
+                textAlign: "center",
+              }}
+            >
               Projects
             </h1>
           </Link>
           <Link href="/contact" style={{ gridColumn: "span 1" }}>
-            <h1 className="text-[#E7DFDD] text-base pb-2 w-fit px-3 text-center col-span-1">
+            <h1
+              style={{
+                color: "#E7DFDD",
+                fontSize: "1rem",
+                paddingBottom: "0.5rem",
+                width: "fit-content",
+                padding: "0.75rem",
+                textAlign: "center",
+              }}
+            >
               Contact
             </h1>
           </Link>
         </div>
       </div>
-      <div className="border-b-[0.5px] border-b-[#48403e] w-full flex justify-center items-center mx-auto py-3">
-        <div className="text-center mb-5 flex gap-5 -ml-5">
+      <div
+        style={{
+          borderBottom: "0.5px solid #48403e",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "0 auto",
+          padding: "0.75rem 0",
+        }}
+      >
+        <div
+          style={{
+            textAlign: "center",
+            marginBottom: "0.5rem",
+            display: "flex",
+            gap: "0.75rem",
+            marginLeft: "-4.25rem",
+            width: "fit-content",
+          }}
+        >
           <a
-            href="https://www.facebook.com/alihfala/"
             className="text-[#E7DFDD] bg-[#4717F6] w-fit p-2 rounded-full hover:bg-[#A239CA]"
+            href="https://www.facebook.com/alihfala/"
+            style={{
+              color: "#E7DFDD",
+              backgroundColor: "#4717F6",
+              padding: "0.5rem",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "fit-content",
+              transition: "background-color 0.3s ease-in-out",
+            }}
           >
             <RiFacebookFill />
           </a>
           <a
-            href="https://www.instagram.com/alihfala"
             className="text-[#E7DFDD] bg-[#4717F6] w-fit p-2 rounded-full hover:bg-[#A239CA]"
+            href="https://www.instagram.com/alihfala"
+            style={{
+              color: "#E7DFDD",
+              backgroundColor: "#4717F6",
+              padding: "0.5rem",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "fit-content",
+              transition: "background-color 0.3s ease-in-out",
+            }}
           >
             <FaInstagram />
           </a>
           <a
-            href="https://www.linkedin.com/in/ali-fala-08a9382a2/"
             className="text-[#E7DFDD] bg-[#4717F6] w-fit p-2 rounded-full hover:bg-[#A239CA]"
+            href="https://www.linkedin.com/in/ali-fala-08a9382a2/"
+            style={{
+              color: "#E7DFDD",
+              backgroundColor: "#4717F6",
+              padding: "0.5rem",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "fit-content",
+              transition: "background-color 0.3s ease-in-out",
+            }}
           >
             <FaLinkedinIn />
           </a>
           <a
-            href="https://github.com/alihfala"
             className="text-[#E7DFDD] bg-[#4717F6] w-fit p-2 rounded-full hover:bg-[#A239CA]"
+            href="https://github.com/alihfala"
+            style={{
+              color: "#E7DFDD",
+              backgroundColor: "#4717F6",
+              padding: "0.5rem",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "fit-content",
+              transition: "background-color 0.3s ease-in-out",
+            }}
           >
             <FiGithub />
           </a>
         </div>
       </div>
-      <div className="text-center p-3 -ml-5 text-[#E7DFDD]">
-        © 2024 Copyright: <a href="/">alihfala</a>
+      <div
+        style={{
+          textAlign: "center",
+          padding: "10px",
+          marginLeft: "-0.5rem",
+          color: "#E7DFDD",
+        }}
+      >
+        © 2024 Copyright:{" "}
+        <a href="/" style={{ color: "#E7DFDD" }}>
+          alihfala
+        </a>
       </div>
     </div>
   );
