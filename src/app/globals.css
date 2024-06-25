@@ -31,3 +31,23 @@ body {
     text-wrap: balance;
   }
 }
+
+.animated-border {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-border::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px; /* Change this value to set the thickness of the border */
+  width: 0;
+  background-color: #A239CA; /* Change this to your desired color */
+  transition: width 0.3s ease-in-out;
+}
+
+.animated-border:hover::after {
+  width: 100%;
+}
