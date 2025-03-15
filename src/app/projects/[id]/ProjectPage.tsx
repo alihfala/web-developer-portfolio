@@ -3,21 +3,15 @@
 import Layout from "@/Components/layout/Layout";
 import Image from "next/image";
 import type { Project } from "@/app/projects/data";
-import { projects } from "@/app/projects/data";
 import ImageViewer from "@/Components/ImageViewer";
 import { useState } from "react";
 
 interface ProjectPageProps {
-  id: string;
+  project: Project;
 }
 
-export default function ProjectPage({ id }: ProjectPageProps) {
+export default function ProjectPage({ project }: ProjectPageProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
-  const project = projects.find((p: Project) => p.id === id);
-
-  if (!project) {
-    return <p>Project not found</p>;
-  }
 
   return (
     <Layout>

@@ -15,7 +15,7 @@ export const projects: Project[] = [
       "Implementing the website for a Lebanese newspaper involved a modern and efficient tech stack to ensure a seamless user experience and robust content management. We utilized Next.js and TypeScript to build a fast, scalable, and type-safe front-end application. Tailwind CSS was employed to create a responsive and visually appealing design, enhancing the overall user interface. For the back-end, Strapi served as the headless CMS, offering flexible and powerful content management capabilities. GraphQL was integrated to streamline data fetching, providing a smooth and efficient way to query the necessary information. This combination of technologies enabled the development of a dynamic, high-performance website that effectively delivers news and updates to its audience.",
     images: ["/image1.png", "/image7.png", "/image8.png", "/image9.png"],
     mobile: false,
-    image: "/image1.png",
+    image: "/image1.png"
   },
   {
     id: "2",
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     In this project, my role as the front-end developer was to transform the provided design mockups into a fully functional website. I meticulously implemented the designs using Next.js and Tailwind CSS, ensuring that the site was not only visually appealing but also responsive and user-friendly. By leveraging TypeScript, I maintained type safety and reduced potential bugs in the code. My focus was on creating an intuitive user experience, making it easy for users to navigate the site, and find the information they needed efficiently.`,
     images: ["/w4.png", "/w1.png", "/w2.png", "/w3.png"],
     mobile: false,
-    image: "/w4.png",
+    image: "/w4.png"
   },
   {
     id: "3",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     On the back-end, ASP.NET Web API provided a robust and scalable framework for implementing the application's business logic and managing interactions with the database. My primary responsibility in this project was to develop the entire website, encompassing both front-end and back-end aspects. I transformed design mockups into fully functional web pages using ReactJS and CSS, ensuring seamless navigation and intuitive user interactions. This approach empowered users to effortlessly find and rent or purchase bikes according to their preferences, enhancing overall usability and satisfaction.`,
     images: ["/bbbw1.png", "/bbbw2.png", "/bbbw3.png"],
     mobile: false,
-    image: "/bbbw1.png",
+    image: "/bbbw1.png"
   },
   {
     id: "4",
@@ -53,10 +53,10 @@ export const projects: Project[] = [
       "/bbb6.jpeg",
       "/bbbw4.png",
       "/bbbw5.png",
-      "/bbbw6.png",
+      "/bbbw6.png"
     ],
     mobile: true,
-    image: "/bbb11.jpeg",
+    image: "/bbb11.jpeg"
   },
   {
     id: "5",
@@ -68,10 +68,10 @@ export const projects: Project[] = [
       "/hotel1.png",
       "/hotel3.png",
       "/hotel4.png",
-      "/hotel5.png",
+      "/hotel5.png"
     ],
     mobile: false,
-    image: "/hotel2.png",
+    image: "/hotel2.png"
   },
   {
     id: "6",
@@ -84,9 +84,9 @@ export const projects: Project[] = [
       "/clinic2.jpeg",
       "/clinic3.jpeg",
       "/clinic4.jpeg",
-      "/clinic5.jpeg",
+      "/clinic5.jpeg"
     ],
     mobile: true,
-    image: "/clinic5.jpeg",
-  },
+    image: "/clinic5.jpeg"
+  }
 ]; 
