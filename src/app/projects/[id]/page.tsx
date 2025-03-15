@@ -102,6 +102,8 @@ const Project = ({ params }: any) => {
                   key={index}
                   src={image}
                   alt={`${project.title} image ${index + 1}`}
+                  width={1200}
+                  height={800}
                   className="w-full h-[500px] rounded-lg border-2 border-[#A239CA]"
                 />
               ))}
@@ -112,6 +114,8 @@ const Project = ({ params }: any) => {
                   key={index}
                   src={image}
                   alt={`${project.title} image ${index + 1}`}
+                  width={800}
+                  height={600}
                   className="w-full h-72 rounded-lg border-2 border-[#A239CA]"
                 />
               ))}
@@ -125,6 +129,8 @@ const Project = ({ params }: any) => {
                   key={index}
                   src={image}
                   alt={`${project.title} image ${index + 1}`}
+                  width={600}
+                  height={1200}
                   className="w-full h-[650px] rounded-lg"
                 />
               ))}
@@ -135,6 +141,8 @@ const Project = ({ params }: any) => {
                   key={index}
                   src={image}
                   alt={`${project.title} image ${index + 1}`}
+                  width={1200}
+                  height={800}
                   className="w-full h-[450px] rounded-lg"
                 />
               ))}

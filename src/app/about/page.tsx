@@ -124,10 +124,10 @@ const index = () => {
         </div>
         <hr className="w-[60%] bg-[#E7DFDD] my-10 mx-auto" />
         <div className="flex flex-col justify-center mb-10">
-          <h2 className="text-3xl font-bold text-[#E7DFDD] text-center mb-5">
+          <h2 className="text-3xl font-bold text-[#E7DFDD] text-center mb-8">
             Skills
           </h2>
-          <div className="w-[85%] grid grid-cols-6 mx-auto gap-5">
+          <div className="w-[90%] md:w-[85%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-5 mx-auto">
             {data.map((data) => (
               <ImageCard
                 key={data.id}

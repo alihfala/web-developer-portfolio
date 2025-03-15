@@ -1,118 +1,91 @@
+"use client";
 // components/Header.js
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
-    <div
-      style={{
-        backgroundColor: "#0E0B16",
-        paddingLeft: "1rem",
-        paddingTop: "0.5rem",
-        paddingBottom: "0.5rem",
-        borderBottom: "0.5px solid #E7DFDD",
-      }}
-    >
-      <div
-        style={{
-          width: "100%",
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          height: "fit-content",
-        }}
-      >
-        <Link href="/">
-          <div
-            style={{
-              width: "3rem",
-              height: "3rem",
-              marginTop: "-0.5rem",
-              marginLeft: "0.5rem",
-              display: "flex",
-              justifyContent: "start",
-              border: "2px solid #A239CA",
-              borderRadius: "0.25rem",
-              padding: "0.125rem",
-              cursor: "pointer",
-            }}
+    <header className="fixed w-full top-0 z-50 bg-[#0E0B16] border-b border-[#E7DFDD]/10 backdrop-blur-sm">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 border-2 border-[#A239CA] rounded-lg overflow-hidden">
+              <Image
+                src="/af.png"
+                width={40}
+                height={40}
+                alt="Logo"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <span className="text-[#E7DFDD] font-semibold text-xl hidden sm:block">Ali Fala</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-[#E7DFDD] hover:text-[#A239CA] transition-colors duration-300 text-sm font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-[#E7DFDD] hover:text-[#A239CA] transition-colors duration-300"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <Image src="/af.png" className="w-full h-full" alt="" />
-          </div>
-        </Link>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-            alignItems: "center",
-            justifySelf: "center",
-            width: "50%",
-          }}
-        >
-          <Link href="/" style={{ gridColumn: "span 1" }}>
-            <h1
-              style={{
-                color: "#E7DFDD",
-                fontSize: "1.125rem",
-                borderBottom: "2px solid transparent",
-                paddingBottom: "0.5rem",
-                width: "fit-content",
-                padding: "0.75rem",
-                textAlign: "center",
-              }}
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              Home
-            </h1>
-          </Link>
-          <Link href="/about" style={{ gridColumn: "span 1" }}>
-            <h1
-              style={{
-                color: "#E7DFDD",
-                fontSize: "1.125rem",
-                borderBottom: "2px solid transparent",
-                paddingBottom: "0.5rem",
-                width: "fit-content",
-                padding: "0.75rem",
-                textAlign: "center",
-              }}
-            >
-              About
-            </h1>
-          </Link>
-          <Link href="/projects" style={{ gridColumn: "span 1" }}>
-            <h1
-              style={{
-                color: "#E7DFDD",
-                fontSize: "1.125rem",
-                borderBottom: "2px solid transparent",
-                paddingBottom: "0.5rem",
-                width: "fit-content",
-                padding: "0.75rem",
-                textAlign: "center",
-              }}
-            >
-              Projects
-            </h1>
-          </Link>
-          <Link href="/contact" style={{ gridColumn: "span 1" }}>
-            <h1
-              style={{
-                color: "#E7DFDD",
-                fontSize: "1.125rem",
-                borderBottom: "2px solid transparent",
-                paddingBottom: "0.5rem",
-                width: "fit-content",
-                padding: "0.75rem",
-                textAlign: "center",
-              }}
-            >
-              Contact
-            </h1>
-          </Link>
+              {isMenuOpen ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="block px-3 py-2 text-[#E7DFDD] hover:text-[#A239CA] transition-colors duration-300 text-base font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
-    </div>
+    </header>
   );
 };
 

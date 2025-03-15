@@ -1,238 +1,88 @@
 // components/Footer.js
 import Link from "next/link";
-import { RiFacebookFill } from "react-icons/ri";
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
 import Image from "next/image";
+import { RiFacebookFill } from "react-icons/ri";
+import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
+  const socialLinks = [
+    { href: "https://www.facebook.com/alihfala/", icon: RiFacebookFill },
+    { href: "https://www.instagram.com/alihfala", icon: FaInstagram },
+    { href: "https://www.linkedin.com/in/ali-fala-08a9382a2/", icon: FaLinkedinIn },
+    { href: "https://github.com/alihfala", icon: FaGithub },
+  ];
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
-    <div
-      style={{
-        backgroundColor: "#0E0B16",
-        height: "240px",
-        borderTop: "0.5px solid #E7DFDD",
-        color: "#E7DFDD",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        margin: "0 auto",
-        width: "100%",
-      }}
-    >
-      <div
-        className="container flex justify-between items-center !mx-auto"
-        style={{ padding: "40px" }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
-            alignItems: "center",
-            justifySelf: "center",
-            width: "50%",
-            margin: "auto",
-          }}
-        >
-          <Link href="/" style={{ gridColumn: "span 1" }}>
-            <h1
-              style={{
-                color: "#E7DFDD",
-                fontSize: "1rem",
-                paddingBottom: "0.5rem",
-                width: "fit-content",
-                padding: "0.75rem",
-                textAlign: "center",
-                display: "flex",
-                justifyContent: "center",
-                margin: "auto",
-              }}
-            >
-              Home
-            </h1>
-          </Link>
-          <Link href="/about" style={{ gridColumn: "span 1" }}>
-            <h1
-              style={{
-                color: "#E7DFDD",
-                fontSize: "1rem",
-                paddingBottom: "0.5rem",
-                width: "fit-content",
-                padding: "0.75rem",
-                textAlign: "center",
-                display: "flex",
-                justifyContent: "center",
-                margin: "auto",
-              }}
-            >
-              About
-            </h1>
-          </Link>
-          <Link href="/" style={{ gridColumn: "span 1" }}>
-            <div
-              style={{
-                width: "3rem",
-                height: "3rem",
-                marginTop: "-0.5rem",
-                marginLeft: "0.5rem",
-                display: "flex",
-                border: "2px solid #A239CA",
-                borderRadius: "0.25rem",
-                padding: "0.125rem",
-                cursor: "pointer",
-                justifyContent: "center",
-                margin: "auto",
-              }}
-            >
-              <Image src="/af.png" className="w-full h-full" alt="" />
+    <footer className="bg-[#0E0B16] border-t border-[#E7DFDD]/10">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          {/* Logo Section */}
+          <div className="flex flex-col items-center md:items-start space-y-4">
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="w-12 h-12 border-2 border-[#A239CA] rounded-lg overflow-hidden">
+                <Image
+                  src="/af.png"
+                  width={48}
+                  height={48}
+                  alt="Logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="text-[#E7DFDD] font-semibold text-xl">Ali Fala</span>
+            </Link>
+            <p className="text-[#E7DFDD]/60 text-sm text-center md:text-left">
+              Full Stack Developer crafting elegant solutions for web and mobile applications.
+            </p>
+          </div>
+
+          {/* Navigation Links */}
+          <nav className="flex justify-center">
+            <div className="grid grid-cols-2 gap-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-[#E7DFDD] hover:text-[#A239CA] transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
-          </Link>
-          <Link href="/projects" style={{ gridColumn: "span 1" }}>
-            <h1
-              style={{
-                color: "#E7DFDD",
-                fontSize: "1rem",
-                paddingBottom: "0.5rem",
-                width: "fit-content",
-                padding: "0.75rem",
-                textAlign: "center",
-                display: "flex",
-                justifyContent: "center",
-                margin: "auto",
-              }}
-            >
-              Projects
-            </h1>
-          </Link>
-          <Link href="/contact" style={{ gridColumn: "span 1" }}>
-            <h1
-              style={{
-                color: "#E7DFDD",
-                fontSize: "1rem",
-                paddingBottom: "0.5rem",
-                width: "fit-content",
-                padding: "0.75rem",
-                textAlign: "center",
-                display: "flex",
-                justifyContent: "center",
-                margin: "auto",
-              }}
-            >
-              Contact
-            </h1>
-          </Link>
+          </nav>
+
+          {/* Social Links */}
+          <div className="flex flex-col items-center md:items-end space-y-4">
+            <div className="flex space-x-4">
+              {socialLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#E7DFDD] hover:text-[#A239CA] transition-colors duration-300"
+                >
+                  <link.icon size={24} />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-8 pt-8 border-t border-[#E7DFDD]/10 text-center">
+          <p className="text-[#E7DFDD]/60 text-sm">
+            © {new Date().getFullYear()} Ali Fala. All rights reserved.
+          </p>
         </div>
       </div>
-      <div
-        style={{
-          borderBottom: "0.5px solid #48403e",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          margin: "0 auto",
-          padding: "0.75rem 0",
-        }}
-      >
-        <div
-          style={{
-            textAlign: "center",
-            marginBottom: "0.5rem",
-            display: "flex",
-            gap: "0.75rem",
-            marginLeft: "-0.25rem",
-            width: "fit-content",
-          }}
-        >
-          <a
-            className="text-[#E7DFDD] bg-[#4717F6] w-fit p-2 rounded-full hover:bg-[#A239CA]"
-            href="https://www.facebook.com/alihfala/"
-            style={{
-              color: "#E7DFDD",
-              backgroundColor: "#4717F6",
-              padding: "0.5rem",
-              borderRadius: "9999px",
-              textDecoration: "none",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "fit-content",
-              transition: "background-color 0.3s ease-in-out",
-            }}
-          >
-            <RiFacebookFill />
-          </a>
-          <a
-            className="text-[#E7DFDD] bg-[#4717F6] w-fit p-2 rounded-full hover:bg-[#A239CA]"
-            href="https://www.instagram.com/alihfala"
-            style={{
-              color: "#E7DFDD",
-              backgroundColor: "#4717F6",
-              padding: "0.5rem",
-              borderRadius: "9999px",
-              textDecoration: "none",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "fit-content",
-              transition: "background-color 0.3s ease-in-out",
-            }}
-          >
-            <FaInstagram />
-          </a>
-          <a
-            className="text-[#E7DFDD] bg-[#4717F6] w-fit p-2 rounded-full hover:bg-[#A239CA]"
-            href="https://www.linkedin.com/in/ali-fala-08a9382a2/"
-            style={{
-              color: "#E7DFDD",
-              backgroundColor: "#4717F6",
-              padding: "0.5rem",
-              borderRadius: "9999px",
-              textDecoration: "none",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "fit-content",
-              transition: "background-color 0.3s ease-in-out",
-            }}
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            className="text-[#E7DFDD] bg-[#4717F6] w-fit p-2 rounded-full hover:bg-[#A239CA]"
-            href="https://github.com/alihfala"
-            style={{
-              color: "#E7DFDD",
-              backgroundColor: "#4717F6",
-              padding: "0.5rem",
-              borderRadius: "9999px",
-              textDecoration: "none",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "fit-content",
-              transition: "background-color 0.3s ease-in-out",
-            }}
-          >
-            <FiGithub />
-          </a>
-        </div>
-      </div>
-      <div
-        style={{
-          textAlign: "center",
-          padding: "12px",
-          marginLeft: "-0.5rem",
-          color: "#E7DFDD",
-        }}
-      >
-        © 2024 Copyright:{" "}
-        <a href="/" style={{ color: "#E7DFDD" }}>
-          alihfala
-        </a>
-      </div>
-    </div>
+    </footer>
   );
 };
 
