@@ -3,9 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 231, 223, 221;
+  --background-rgb: 14, 11, 22;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Ensure images maintain aspect ratio */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 @media (prefers-color-scheme: dark) {
